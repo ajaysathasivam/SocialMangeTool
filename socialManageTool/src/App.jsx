@@ -1,24 +1,30 @@
+import Button from "./components/button"
 import React from 'react';
-import FacebookLogin from 'react-facebook-login';
+import AccountsProfile from "./components/loginProfile";
+// import FacebookLogin from 'react-facebook-login';
 
 const App = (props) => {
-  const handleFacebookCallback = (response) => {
-    if (response?.status === "unknown") {
-        console.error('Sorry!', 'Something went wrong with facebook Login.');
-     return;
-    }
-    console.log(response);
-      // console will print following object for you.
+  // const handleFacebookCallback = (response) => {
+  //   if (response?.status === "unknown") {
+  //       console.error('Sorry!', 'Something went wrong with facebook Login.');
+  //    return;
+  //   }
+  //   console.log(response);
+  //     // console will print following object for you.
        
-   }
+  //  }
 
   return (
-    <FacebookLogin 
-      buttonStyle={{padding:"6px"}}  
-      appId="1320716502478119"  // we need to get this from facebook developer console by setting the app.
-      autoLoad={false}  
+    // <FacebookLogin 
+    //   buttonStyle={{padding:"6px"}}  
+    //   appId="1320716502478119"  // we need to get this from facebook developer console by setting the app.
+    //   autoLoad={false}  
       
-      callback={handleFacebookCallback}/>
+    //   callback={handleFacebookCallback}/>
+    <>
+    <Button/>
+    <AccountsProfile/>
+    </>
   );
 };
 
